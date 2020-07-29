@@ -2,12 +2,12 @@
     <div class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col col-sm-12">
+                <div class="col col-12">
                     <h1 id="cards" class="bv-no-focus-ring" tabindex="-1"><span class="bd-content-title">Todos</span></h1>
                 </div>
             </div>
             <div class="row pt-4">
-                <div class="col col-sm-12">
+                <div class="col col-12">
                     <ul class="nav nav-pills nav-fill">
                         <li class="nav-item" v-for="item in navItems" :key="item.key">
                             <a class="nav-link" href="javascript:" :class="{ 'active' : item.key === activeNavKey }" @click="onNavChanged(item)">{{ item.title }}</a>
@@ -18,7 +18,7 @@
         </div>
         <div class="container py-4">
             <div class="row">
-                <div v-for="(todo, index) in filterItems" v-bind:key="index + todo.id" class="col col-sm-6 col-md-4">
+                <div v-for="(todo, index) in filterItems" v-bind:key="index + todo.id" class="col col-12 col-sm-6 col-md-4">
                     <todo-card :todo="todo" @action:mark="onAction(todo)" />
                 </div>
             </div>
